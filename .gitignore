@@ -1,2 +1,12 @@
 .env
 venv
+.venv
+*.pyc
+*.db
+backend/*.db
+backend/__pycache__
+backend/venv
+backend/cityfacts-backend.egg-info
+backend/cityfacts-backend.egg-info
+backend/cityfacts-backend.egg-info
+backend/cityfacts-backend.egg-info
