@@ -1,15 +1,14 @@
-from fastapi import FastAPI, HTTPException, Depends
-from fastapi.responses import JSONResponse
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from typing import List
 import logging
-from models import SessionLocal, City, CityFact
-from sqlalchemy.orm import Session
-import google.generativeai as genai
 import os
-from dotenv import load_dotenv
 
+import google.generativeai as genai
+from dotenv import load_dotenv
+from fastapi import Depends, FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+from models import City, CityFact, SessionLocal
+from pydantic import BaseModel
+from sqlalchemy.orm import Session
 
 load_dotenv()
 

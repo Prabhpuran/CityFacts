@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 from pydantic import BaseModel
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./city_facts.db"
+SQLALCHEMY_DATABASE_URL = "sqlite:///./cityfacts.db"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
