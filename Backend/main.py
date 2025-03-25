@@ -146,7 +146,7 @@ async def get_city_facts(city_name: str, db: Session = Depends(get_db)):
     for fact in facts:
         facts_text += f"{fact.fact_type}: {fact.fact_value}\n"
     
-    return CityFactsResponse(name=db_city.name, facts=facts_text)
+    return CityFactsResponse(name=str(db_city.name), facts=facts_text)
 
 
 
