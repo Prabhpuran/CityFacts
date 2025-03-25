@@ -1,2 +1,7 @@
 .env
 venv
+.venv
+*.pyc
+*.db
+.mypy_cache
+.ruff_cache

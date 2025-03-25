@@ -1,17 +1,17 @@
 # models.py
 from sqlalchemy import create_engine, Column, Integer, String, Text, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, relationship
+from sqlalchemy.orm import sessionmaker, relationship, DeclarativeBase
 from pydantic import BaseModel
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./city_facts.db"
+SQLALCHEMY_DATABASE_URL = "sqlite:///./cityfacts.db"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-Base = declarative_base()
+class Base(DeclarativeBase):
+    pass
 
 class City(Base):
     __tablename__ = "cities"
